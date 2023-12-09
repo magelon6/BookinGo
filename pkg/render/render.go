@@ -16,7 +16,7 @@ var functions = template.FuncMap{
 // RenderTemplate Renders templates
 func RenderTemplate(w http.ResponseWriter, tmpl string) {
 
-	tc, err := CreatePagesCache()	
+	tc, err := CreatePagesCache()
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -37,7 +37,7 @@ func RenderTemplate(w http.ResponseWriter, tmpl string) {
 }
 
 // CreatePagesCache creates template cache as a map
-func CreatePagesCache()(map[string]*template.Template, error) {
+func CreatePagesCache()  (map[string]*template.Template, error) {
 
 	myCache := map[string]*template.Template{}
 
