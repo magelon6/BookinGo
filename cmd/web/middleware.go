@@ -14,6 +14,7 @@ func WriteToConsole(next http.Handler) http.Handler {
   })
 }
 
+// Nosurf adds CSRF protection to all post requests
 func NoSurf(next http.Handler) http.Handler {
   csrfHandler := nosurf.New(next)
 
